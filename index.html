@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Punto de Observacion</title>
+</head>
+
+<body>
+
+    <!-- Seccion Buscador -->
+    <section class="conteinerBuscador">
+        <div class="textoBuscador">
+            <h2 class="subtitulos">Que tenes ganas de cenar hoy?</h2>
+            <form class="text-center border border-light p-5" action="#!" id="formBuscador">
+                <label for="sel1">Elegir por tipo de comida/carta </label>
+                <select class="form-control mb-4" id="carta">
+                    <option>Elegir comida...</option>
+                    <option>Bodegon</option>
+                    <option>Comida Oriental</option>
+                    <option>Hamburgueserias</option>
+                    <option>Pastas</option>
+                    <option>Veggie</option>
+                    <option>Platos de autor</option>
+                </select>
+                <label for="sel1">O si queres, por barrio (solo disponible para CABA)</label>
+                <select class="form-control mb-4" id="barrio">
+                    <option>Elegir barrio...</option>
+                    <option>Belgrano</option>
+                    <option>Microcentro</option>
+                    <option>Palermo</option>
+                    <option>Nuniez</option>
+                    <option>Chacarita</option>
+                </select>
+            
+                <button class="btn btn-info " type="submit" id="btnBuscar">Buscar</button>
+            </form>
+        </div>
+
+    <div id="contenedor-resultados" class="row">
+
+    </div>
+
+    <div>
+        <button class="btn btn-primary" type="submit" id="btnFavoritos">Mostrar Favoritos</button>
+        <button class="btn btn-primary" type="submit" id="btnOcultarFavoritos" onclick="ocultarInnerHtml(contenedorFavoritos)" >OcultarFavoritos</button>
+    </div>
+
+    <section>
+        <div id="contenedor-favoritos" class="row">
+        </div>
+    </section>
+
+    <form class="text-center border border-light p-5" action="#!" id="formulario">
+        <p class="h4 mb-4 subtitulos">Tu restaurante favorito no esta? Ayudanos a recomendarlo! </p>
+        <!-- Nombre -->
+        <input type="text" id="nombre" class="form-control mb-4" placeholder="Nombre del restaurante*">
+        <!-- Barrio -->
+        <input type="text" id="barrio" class="form-control mb-4" placeholder="En que barrio queda? ">
+        <!-- Valor Cena -->
+        <input type="text" id="valorCena" class="form-control mb-4" placeholder="Cual es el valor promedio para una persona?">
+        <!-- Tipo de comida -->
+        <input type="text" id="comida" class="form-control mb-4" placeholder="Que tipo de comida lo caracteriza? ">
+        <!-- Boton de envio -->
+        <button class="btn btn-info btn-block" type="submit" id="btnEnvio">Enviar</button>
+    </form>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
